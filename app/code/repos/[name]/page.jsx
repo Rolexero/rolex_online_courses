@@ -1,15 +1,12 @@
 import { Suspense } from 'react';
 import Link from 'next/link';
-import Repo from '@/app/componets/Repo';
-import RepoDirs from '@/app/componets/RepoDirs';
+import Repo from '@/app/components/Repo';
+import RepoDirs from '@/app/components/RepoDirs';
 
 const RepoPage = ({ params: { name } }) => {
-    console.log(name)
   return (
     <div className='card'>
-        {name}
-
-      {/* <Link href='/code/repos' className='btn btn-back'>
+      <Link href='/code/repos' className='btn btn-back'>
         Back To Repositories
       </Link>
       <Suspense fallback={<div>Loading repo...</div>}>
@@ -17,7 +14,7 @@ const RepoPage = ({ params: { name } }) => {
       </Suspense>
       <Suspense fallback={<div>Loading directories...</div>}>
         <RepoDirs name={name} />
-      </Suspense> */}
+      </Suspense>
     </div>
   );
 };
